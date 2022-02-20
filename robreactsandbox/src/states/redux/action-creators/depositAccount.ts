@@ -9,7 +9,6 @@ export type AppDispatch = typeof store.dispatch;
 
 export const depositAccount = (amount: number) => {
   return (dispatch: Dispatch<AccountReducerActionType>) => {
-    console.log("hi");
     dispatch({
       type: accountReducerActions.deposit,
       payload: amount,

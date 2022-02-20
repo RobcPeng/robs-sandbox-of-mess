@@ -50,6 +50,7 @@ type propInputs = {
   children: React.ReactChild;
 };
 
+//SO MUCH CLEANERR
 export function ToggleFuncComponent() {
   const [toggle, setToggle] = useState(false);
   return (
