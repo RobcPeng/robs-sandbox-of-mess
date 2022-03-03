@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 export function ApiSandbox() {
   const [apiStuff, setApiStuff] = useState("");
 
+  //https://devtrium.com/posts/async-functions-useeffect
   const randomApi = async () => {
     // return fetch("https://randomuser.me/api")
     //   .then((val) => {
