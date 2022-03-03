@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <p>{process.env.BACKEND_URL}</p>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />

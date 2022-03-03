@@ -16,7 +16,7 @@
   \***********************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst express_1 = __importDefault(__webpack_require__(/*! express */ \"express\"));\n(__webpack_require__(/*! dotenv */ \"dotenv\").config)();\nconst app = (0, express_1.default)();\nconst port = \"3334\";\napp.listen(port, () => {\n    console.log(`this is running on ${port}`);\n});\n\n\n//# sourceURL=webpack://nodebackend/./src/server.ts?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst express_1 = __importDefault(__webpack_require__(/*! express */ \"express\"));\n(__webpack_require__(/*! dotenv */ \"dotenv\").config)();\nconst app = (0, express_1.default)();\nconst port = \"3334\";\napp.get(\"/initial\", (req, res) => {\n    res.status(200).json({ hi: \"world\" });\n});\napp.listen(port, () => {\n    console.log(`this is running on ${port}`);\n});\n\n\n//# sourceURL=webpack://nodebackend/./src/server.ts?");
 
 /***/ }),
 
