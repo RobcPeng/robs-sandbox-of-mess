@@ -6,47 +6,16 @@
  * @flow strict-local
  */
 
-import React, {useState} from 'react';
-import {View, Text, Button, TextInput} from 'react-native';
+import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {
-  RootStackParamlist,
-  RootStackParamListType,
-} from 'src/navigation/navTypes';
-
-const Homescreen = ({navigation}: RootStackParamListType<'Home'>) => {
-  const [val, setVal] = useState<string | number>('');
-
-  return (
-    <View>
-      <TextInput
-        style={{backgroundColor: 'red', padding: '10%', borderRadius: 8}}
-        onChange={vl => {
-          setVal(vl.nativeEvent.text), console.log(vl);
-        }}
-      />
-      <Text>{val}</Text>
-      <Text>hi</Text>
-      <Button
-        title="Settings"
-        onPress={() => navigation.navigate('Settings')}
-      />
-    </View>
-  );
-};
-
-function Settings() {
-  return (
-    <View>
-      <Text>Settings</Text>
-    </View>
-  );
-}
+import {RootStackParamlist} from './src/navigation/navTypes';
+import {Homescreen} from './src/Screens/HomeScreen';
+import {Settings} from './src/screens/Settings';
+import RnChartKitSandboxScreen from './src/Screens/RnChartKitSandbox';
 
 export default function App() {
   const Stack = createNativeStackNavigator<RootStackParamlist>();
-
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -62,6 +31,7 @@ export default function App() {
           component={Settings}
           options={{title: 'Settings'}}
         />
+        <Stack.Screen name="RnChartKit" component={RnChartKitSandboxScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
