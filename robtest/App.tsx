@@ -11,8 +11,10 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {RootStackParamlist} from './src/navigation/navTypes';
 import {Homescreen} from './src/Screens/HomeScreen';
-import {Settings} from './src/screens/Settings';
 import RnChartKitSandboxScreen from './src/Screens/RnChartKitSandbox';
+import {Settings} from './src/Screens/Settings';
+import {SVGCharts} from './src/Screens/SvgCharts';
+import {VictoryCharts} from './src/Screens/VictoryCharts';
 
 export default function App() {
   const Stack = createNativeStackNavigator<RootStackParamlist>();
@@ -32,6 +34,8 @@ export default function App() {
           options={{title: 'Settings'}}
         />
         <Stack.Screen name="RnChartKit" component={RnChartKitSandboxScreen} />
+        <Stack.Screen name="SVGCharts" component={SVGCharts} />
+        <Stack.Screen name="VictoryCharts" component={VictoryCharts} />
       </Stack.Navigator>
     </NavigationContainer>
   );

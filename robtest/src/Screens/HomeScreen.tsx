@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {TextInput, View, Text, Button} from 'react-native';
-
 import {RootStackParamListType} from '../navigation/navTypes';
 
 export const Homescreen = ({navigation}: RootStackParamListType<'Home'>) => {
@@ -19,6 +18,18 @@ export const Homescreen = ({navigation}: RootStackParamListType<'Home'>) => {
       <Button
         title="Settings"
         onPress={() => navigation.navigate('Settings')}
+      />
+      <Button
+        title="Rn Chart Kit"
+        onPress={() => navigation.navigate('RnChartKit')}
+      />
+      <Button
+        title="SVG Charts"
+        onPress={() => navigation.navigate('SVGCharts')}
+      />
+      <Button
+        title="Victory Charts"
+        onPress={() => navigation.navigate('VictoryCharts')}
       />
     </View>
   );
